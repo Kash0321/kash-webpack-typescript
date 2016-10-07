@@ -4,6 +4,7 @@
   "description": "Me la pela",
   "main": "app.ts",
   "devDependencies": {
+    "@types/angular": "1.5.16",
     "@types/bootstrap": "3.3.32",
     "@types/jquery": "2.0.32",
     "@types/requirejs": "2.1.28",
@@ -15,9 +16,10 @@
     "webpack": "1.12.14"
   },
   "dependencies": {
-    "typescript": "2.0.3",
+    "angular": "1.5.8",
     "bootstrap": "3.3.7",
-    "jquery": "3.1.1"
+    "jquery": "3.1.1",
+    "typescript": "2.0.3"
   },
   "scripts": {
     "test": ""

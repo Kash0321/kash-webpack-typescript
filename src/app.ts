@@ -4,7 +4,6 @@ declare var require: {
     ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
 };
 
-import { Greeter } from './greeter'
 import * as $ from 'jquery';
 
 require('./node_modules/bootstrap/dist/css/bootstrap.css');
@@ -14,10 +13,6 @@ require('./css/style.css');
 import bootStrap = require('bootstrap');
 let bs = bootStrap;
 
-$(() => {
-    var g = new Greeter();
-    $('#launchBtn').click(function() {
-        $('#myModal').modal();
-    });
-    $('#title-text').html(g.greet('Kash'));
-});
+import angular = require('angular');
+
+angular.module('app', []);
