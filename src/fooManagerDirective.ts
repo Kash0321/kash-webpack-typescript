@@ -1,4 +1,4 @@
-function fooManagerDirective() {
+--function fooManagerDirective() {-
     var directive = {
         restrict: 'E',
         replace: true,
@@ -100,6 +100,22 @@ function FooManagerController($http) {
     }
 
     vm.retrieve('first');
+}
+
+module FooManagement.Directives
+{
+    export interface IFooManagerDirectiveVM
+    {
+        isNew: boolean;
+        startId: number;
+        
+        Id: number;
+    }
+
+    export class FooManagerDirective
+    {
+
+    }
 }
 
 angular
