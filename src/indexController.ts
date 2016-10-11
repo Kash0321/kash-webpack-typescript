@@ -1,6 +1,2 @@
-function IndexController() {
+export class IndexController {
 }
-
-angular
-    .module('app')
-    .controller('indexController', IndexController);

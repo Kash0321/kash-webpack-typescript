@@ -7,8 +7,8 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "experimentalDecorators": true,
-        "declaration": false,
-        "outDir": "dist"
+        "declaration": false
+        //"outDir": "."
     },
     "exclude": [
         "out",

@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: "./app.ts",
     output: {
-        path: __dirname + '/dist',
+        path: __dirname,
         filename: "bundle.js"
     },
     // Turn on sourcemaps

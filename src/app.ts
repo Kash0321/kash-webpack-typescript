@@ -15,4 +15,24 @@ let bs = bootStrap;
 
 import angular = require('angular');
 
+//import { FooManagerDirective, FooManagerController, IFooManagerVM } from './FooManagerDirective';
+import { TestDirective, TestController } from './TestDirective';
+import { IndexController } from './IndexController';
+
 angular.module('app', []);
+
+/*
+angular
+    .module('app')
+    .directive('fooManager', FooManagerDirective.Factory())
+    .controller('fooManagerController', FooManagerController);
+*/
+
+angular
+    .module('app')
+    .directive('test-func', TestDirective.Factory())
+    .controller('testController', TestController);
+
+angular
+    .module('app')
+    .controller('indexController', IndexController);
