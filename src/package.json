@@ -8,21 +8,22 @@
     "@types/bootstrap": "3.3.32",
     "@types/jquery": "2.0.32",
     "@types/requirejs": "2.1.28",
+    "bootstrap-webpack": "0.0.5",
     "css-loader": "0.25.0",
+    "exports-loader": "0.6.3",
+    "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
+    "imports-loader": "0.6.5",
+    "less": "^2.7.1",
+    "less-loader": "2.2.3",
     "style-loader": "0.13.1",
     "ts-loader": "0.8.2",
     "url-loader": "0.5.7",
-    "webpack": "1.12.14",
-    "bootstrap-webpack": "0.0.5",
-    "exports-loader": "0.6.3",
-    "extract-text-webpack-plugin": "1.0.1",
-    "imports-loader": "0.6.5",
-    "less-loader": "2.2.3"
+    "webpack": "1.12.14"
   },
   "dependencies": {
     "angular": "1.5.8",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.3.0",
     "jquery": "3.1.1",
     "typescript": "2.0.3"
   },
@@ -30,5 +31,9 @@
     "test": ""
   },
   "author": "Kash",
-  "license": ""
+  "repository": {
+    "type": "git",
+    "url": "https://kash.visualstudio.com/DefaultCollection/SandBox2/_git/webpack-typescript"
+  },
+  "license": "MIT"
 }
