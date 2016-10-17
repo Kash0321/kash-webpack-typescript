@@ -1,29 +1,34 @@
-function messageModalDirective() {
-    var directive = {
-        restrict: 'E',
-        replace: true,
-        templateUrl: 'templates/messageModal.html',
-        scope: {},
-        bindToController: {
+export class MessageModalDirective {
+    public link: ($scope: ng.IScope, $element: ng.IAugmentedJQuery, $attrs: ng.IAttributes) => void;
+    public restrict = 'E';
+    public replace = true;
+    public templateUrl = 'templates/messageModal.html';
+    public scope = {};
+    public bindToController = {
             messageStatus: '=',
             message: '='
-        },
-        link: link,
-        controller: MessageModalController,
-        controllerAs: 'vm',
-    };
+        };
+    public controller = MessageModalController;
+    controllerAs = 'vm';
 
-    function link($scope, $element, $attrs) {
-        $element.attr('id', $attrs.modalId);
+    constructor() {
+        MessageModalDirective.prototype.link = ($scope: ng.IScope, $element: ng.IAugmentedJQuery, $attrs: ng.IAttributes) => {
+            $element.attr('id', $attrs['modalId']);
+        };
     }
 
-    return directive;
+    public static Factory(): any {
+        var directive = () => {
+            return new MessageModalDirective();
+        };
+
+        directive['$inject'] = [];
+
+        return directive;
+    }
 }
 
-function MessageModalController() {
+export class MessageModalController {
+    public messageStatus: number;
+    public message: string;
 }
-
-angular
-    .module('app')
-    .directive('messageModal', messageModalDirective)
-    .controller('MessageModalController', MessageModalController);

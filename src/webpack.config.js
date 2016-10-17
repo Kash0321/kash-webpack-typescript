@@ -1,10 +1,11 @@
 var pkg = require('./package.json');
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: "./app.ts",
     output: {
-        path: __dirname + '/dist',
+        path: path.join(__dirname + '/dist'),
         filename: "bundle.js"
     },
     // Turn on sourcemaps
